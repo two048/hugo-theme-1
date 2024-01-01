@@ -1,0 +1,30 @@
+{{ define "main" }}
+<main>
+    <div class="hero_container">
+        <h1>Home Page</h1>
+        <p>
+            Some introductory text about the page here.
+        </p>
+    </div>
+
+    <hr>
+    </hr>
+
+    <div class="home_post_section">
+        {{ with .Site.GetPage "posts" }}
+        <h2>Recent Posts</h2>
+        <div class="post_item_container">
+            {{ range .Pages | first .Site.Params.postsInHome }}
+            <article class="post_item">
+                <h3><a href="{{ .Permalink }}" class="post_item_link">{{ .Title }}</a></h3>
+                <span class="breaker"></span>
+                <p>{{ .Summary }}</p>
+                <hr>
+            </article>
+            {{ end }}
+        </div>
+        <a href="/posts" class="more_btn">All Posts</a>
+        {{ end }}
+    </div>
+</main>
+{{ end }}

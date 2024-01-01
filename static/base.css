@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+.navbar {
+    background-color: var(--bg-primary-contrast);
+    padding: 8px 16px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid var(--text);
+}
+
+.navbar_container {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.navbar_left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+
+#navbar-logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--bg-primary);
+    text-decoration: none;
+    margin: 0 8px;
+    padding: 8px;
+}
+
+.navbar_right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.navbar a {
+    color: var(--bg-primary);
+    text-decoration: none;
+    margin: 0 8px;
+    padding: 8px;
+    transition: all 0.2s ease;
+}
+
+.right_nav_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#darkmode-toggle {
+    padding: 2px;
+    cursor: pointer;
+    background: var(--bg-primary);
+    border-radius: 50%;
+    color: var(--bg-primary-contrast);
+    transition: all 0.2s ease;
+}
+
+#darkmode-toggle.active {
+    transform: rotate(180deg);
+}
+
+#navbar-logo:hover, .navbar_right a:hover {
+    color: var(--hyperlink);
+}
+
+.navbar_right #darkmode-toggle:hover {
+    background-color: var(--hyperlink);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 16px;
+    margin: auto;
+    max-width: 1000px;
+    min-height: 90svh;
+}
+
+main h1, main h2, main h3, main h4, main h5, main h6 {
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 16px;
+}
+
+main p {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+    main {
+        width: 100%;
+    }
+}
+
+.footer {
+    background-color: var(--bg-primary-contrast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+    padding: 0 16px;
+    border-top: 1px solid var(--text);
+}
+
+.footer_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.footer_left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+
+.footer_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+
+.footer_right p {
+    color: var(--bg-primary);
+    text-decoration: none;
+}
+
+.footer_right a {
+    color: var(--hyperlink);
+    text-decoration: none;
+}
+
+.footer_right a:hover {
+    color: var(--bg-primary);
+    text-decoration: underline;
+}
+
+main a {
+    color: var(--hyperlink);
+    cursor: pointer;
+}
+
+main a:hover {
+    color: var(--bg-primary);
+    text-decoration: underline;
+}
+
+.footer_social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social {
+    padding: 8px;
+    font-size: 20px;
+    color: var(--bg-primary);
+    transition: all 0.2s ease;
+}
+
+.social:hover {
+    color: var(--hyperlink);
+}
+
+.more_btn {
+    margin: 0 8px 8px 0;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: var(--bg-primary-contrast);
+    color: var(--bg-primary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: large;
+    width: 120px;
+    text-align: center;
+}
+
+.more_btn:hover {
+    color: var(--hyperlink);
+}
+
+.home_post_section {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin-top: 16px;
+    width: 100%;
+}
+
+hr {
+    width: 100%;
+}
+
+.hero_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 32px 0;
+}

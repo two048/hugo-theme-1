@@ -1,0 +1,14 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: Two048 - Hugo Theme 1
+
+taxonomies:
+  tag: tags
+
+params:
+  postsInHome: 2 #modify this to change the number of posts in home page
+  social:
+    github: https://github.com/two048
+    linkedin: https://www.linkedin.com/in/yourusername
+
+paginate: 1 #modify this to change the number of posts in each page

@@ -1,0 +1,26 @@
+{{ define "main" }}
+<main>
+    <h1>My Posts</h1>
+    <div class="post_item_container">
+        {{ range .Paginator.Pages }}
+        <article class="post_item">
+            <h3><a href="{{ .Permalink }}" class="post_item_link">{{ .Title }}</a></h3>
+            <span class="breaker"></span>
+            <p>{{ .Summary }}</p>
+            <hr>
+        </article>
+        {{ end }}
+    </div>
+    {{ with .Paginator }}
+    <nav class="pagination">
+        {{ if .HasPrev }}
+        <a href="{{ .Prev.URL }}"><< Prev</a>
+        {{ end }}
+        <span class="page-number">{{ .PageNumber }} of {{ .TotalPages }}</span>
+        {{ if .HasNext }}
+        <a href="{{ .Next.URL }}">Next >></a>
+        {{ end }}
+    </nav>
+    {{ end }}
+</main>
+{{ end }}
